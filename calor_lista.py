@@ -12,16 +12,17 @@
 tempe = []
 quant = int(input('Quanto valores de temperatura voce ira guardar?\n'))
 for i in range(quant):
-    temp = input('informe a temperatura inicial')
+    temp = input('informe a temperatura inicial:\t')
     tempe.append(temp)
 
+print('\n')
 # a)
-print(tempe)
+print(tempe,'\n')
 # b)
 newtempe = list(reversed(tempe))
-print(newtempe)
+print(newtempe,'\n')
 # c)
-print(sorted(tempe))
+print(sorted(tempe),'\n')
 # d)
 tempe.sort(reverse=True)
-print(tempe)
+print(tempe,'\n')
