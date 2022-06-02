@@ -12,7 +12,7 @@
 tempe = []
 quant = int(input('Quanto valores de temperatura voce ira guardar?\n'))
 for i in range(quant):
-    temp = input('informe a temperatura inicial:\t')
+    temp = input('informe a temperatura no tempo {}:\t' .format(i + 1))
     tempe.append(temp)
 
 print('\n')
