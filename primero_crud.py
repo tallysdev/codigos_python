@@ -1,6 +1,4 @@
 # Agenda de contatos
-from curses import pair_number
-
 
 go = input('Quer ver sua agenda de contatos?\t(s/n)\n')
 while go == 's':
@@ -12,3 +10,5 @@ while go == 's':
     print('## 4- Apagar contato    ##')
     print('## 5- Listar todos      ##')
     print('## 0- Sair              ##')
+    opcao = input()
+    print(opcao)
