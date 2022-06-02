@@ -9,3 +9,19 @@
 # teclado
 # c) Ordenados em ordem crescente
 # d) Ordenados em ordem decrescente
+tempe = []
+quant = int(input('Quanto valores de temperatura voce ira guardar?\n'))
+for i in range(quant):
+    temp = input('informe a temperatura inicial')
+    tempe.append(temp)
+
+# a)
+print(tempe)
+# b)
+newtempe = list(reversed(tempe))
+print(newtempe)
+# c)
+print(sorted(tempe))
+# d)
+tempe.sort(reverse=True)
+print(tempe)
