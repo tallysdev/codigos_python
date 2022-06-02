@@ -1,6 +1,7 @@
 # Agenda de contatos
 
 go = input('Quer ver sua agenda de contatos?\t(s/n)\n')
+contatos = []
 while go == 's':
     print('##########################')
     print('### Agenda de contatos ###')
@@ -11,5 +12,15 @@ while go == 's':
     print('## 5- Listar todos      ##')
     print('## 0- Sair              ##')
     opcao = input()
-    print(opcao)
-    
+    # sair
+    if opcao == '0':
+        go = 'xau'
+    elif opcao == '1':
+        n = int(input('deseja adicionar quantos contatos?\n'))
+        for i in range(n):
+            contato = input('Informe o contato\n')
+            contatos.append(contato)
+        print(contatos)
+
+
+print('Voce saiu da agenda')
