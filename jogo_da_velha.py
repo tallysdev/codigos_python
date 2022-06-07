@@ -1,24 +1,31 @@
 velha = [
  ['_', '_', '_'],
  ['_', '_', '_'],
- ['_', '_', '_']
+ ['_', '_', '_'],
+ [' ', ' ', ' '],
+ ['^', '^', '^'],
+ ['1', '2', '3'],
+ ['4', '5', '6'],
+ ['7', '8', '9']
  ]
 print("Tabuleiro")
-for i in range(3):
+for i in range(8):
     for j in range(3):
         print(velha[i][j], end=' ')
  
     print()
 print()
-posicoes = [
- ['1', '2', '3'],
- ['4', '5', '6'],
- ['7', '8', '9']
+
+tabu = [
+ ['_', '_', '_'],
+ ['_', '_', '_'],
+ ['_', '_', '_']
  ]
-print("posiçoes do Tabuleiro")
+print("Tabuleiro oficial")
 for i in range(3):
     for j in range(3):
-        print(posicoes[i][j], end=' ')
+        print(tabu[i][j], end=' ')
  
     print()
 print()
+jog = int(input('onde voce quer jogar?'))
