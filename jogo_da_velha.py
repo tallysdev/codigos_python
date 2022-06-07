@@ -36,7 +36,7 @@ ganhou = False
 jogadas = 0
 while jogadas < 9 and not(ganhou):
 
-    jog = int(input("Informe a posição da sua jogada"))
+    jog = int(input("Informe a posição da sua jogada:\t"))
     i = (jog-1) // 3
     j = (jog-1) % 3
     tabu[i][j] = 'O'
@@ -71,22 +71,32 @@ while jogadas < 9 and not(ganhou):
 
 
     if (tabu[0][0] == tabu[0][1]) and (tabu[0][1] == tabu[0][2]) and (tabu[0][2] != '_'):
+        vit = tabu[0][0]
         ganhou = True
     elif (tabu[1][0] == tabu[1][1]) and (tabu[1][1] == tabu[1][2]) and (tabu[1][2] != '_'):
+        vit = tabu[1][0]
         ganhou = True
     elif (tabu[2][0] == tabu[2][1]) and (tabu[2][1] == tabu[2][2]) and (tabu[2][2] != '_'):
+        vit = tabu[2][0]
         ganhou = True
     elif (tabu[0][0] == tabu[1][0]) and (tabu[1][0] == tabu[2][0]) and (tabu[2][0] != '_'):
+        vit = tabu[0][0]
         ganhou = True
     elif (tabu[0][1] == tabu[1][1]) and (tabu[1][1] == tabu[2][1]) and (tabu[2][1] != '_'):
+        vit = tabu[0][1]
         ganhou = True
     elif (tabu[0][2] == tabu[1][2]) and (tabu[1][2] == tabu[2][2]) and (tabu[2][2] != '_'):
+        vit = tabu[0][0]
         ganhou = True
     elif (tabu[0][0] == tabu[1][1]) and (tabu[1][1] == tabu[2][2]) and (tabu[2][2] != '_'):
+        vit = tabu[0][0]
         ganhou = True
     elif (tabu[0][2] == tabu[1][1]) and (tabu[1][1] == tabu[2][0]) and (tabu[2][0] != '_'):
+        vit = tabu[0][2]
         ganhou = True
 
 if jogadas == 8:
     print('Empateeee')
+
+print('Quem ganhou foi o (',vit,')')
 
