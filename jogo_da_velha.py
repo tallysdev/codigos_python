@@ -1,4 +1,4 @@
-velha = [
+tabu = [
  ['_', '_', '_'],
  ['_', '_', '_'],
  ['_', '_', '_'],
@@ -11,7 +11,7 @@ velha = [
 print("Tabuleiro")
 for i in range(8):
     for j in range(3):
-        print(velha[i][j], end=' ')
+        print(tabu[i][j], end=' ')
  
     print()
 print()
@@ -32,34 +32,35 @@ print()
 ganhou = False
 while jogada < 10 and not(ganhou):
 
-    if (velha[0][0] == velha[0][1]) and (velha[0][1] == velha[0][2]) and (velha[0][2] != '_'):
-        ganhou = True
-    elif (velha[1][0] == velha[1][1]) and (velha[1][1] == velha[1][2]) and (velha[1][2] != '_'):
-        ganhou = True
-    elif (velha[2][0] == velha[2][1]) and (velha[2][1] == velha[2][2]) and (velha[2][2] != '_'):
-        ganhou = True
-    elif (velha[0][0] == velha[1][0]) and (velha[1][0] == velha[2][0]) and (velha[2][0] != '_'):
-        ganhou = True
-    elif (velha[0][1] == velha[1][1]) and (velha[1][1] == velha[2][1]) and (velha[2][1] != '_'):
-        ganhou = True
-    elif (velha[0][2] == velha[1][2]) and (velha[1][2] == velha[2][2]) and (velha[2][2] != '_'):
-        ganhou = True
-    elif (velha[0][0] == velha[1][1]) and (velha[1][1] == velha[2][2]) and (velha[2][2] != '_'):
-        ganhou = True
-    elif (velha[0][2] == velha[1][1]) and (velha[1][1] == velha[2][0]) and (velha[2][0] != '_'):
-        ganhou = True
+    jog = int(input("Informe a posição da sua jogada"))
+    i = (jog-1) // 3
+    j = (jog-1) % 3
+    tabu[i][j] = 'O'
 
-
-
-jog = int(input("Informe a posição da sua jogada"))
-i = (jog-1) // 3
-j = (jog-1) % 3
-tabu[i][j] = 'O'
-
-print("Tabuleiro oficial")
-for i in range(3):
-    for j in range(3):
-        print(tabu[i][j], end=' ')
+    print("Tabuleiro oficial")
+    for i in range(3):
+        for j in range(3):
+            print(tabu[i][j], end=' ')
  
+        print()
     print()
-print()
+
+    if (tabu[0][0] == tabu[0][1]) and (tabu[0][1] == tabu[0][2]) and (tabu[0][2] != '_'):
+        ganhou = True
+    elif (tabu[1][0] == tabu[1][1]) and (tabu[1][1] == tabu[1][2]) and (tabu[1][2] != '_'):
+        ganhou = True
+    elif (tabu[2][0] == tabu[2][1]) and (tabu[2][1] == tabu[2][2]) and (tabu[2][2] != '_'):
+        ganhou = True
+    elif (tabu[0][0] == tabu[1][0]) and (tabu[1][0] == tabu[2][0]) and (tabu[2][0] != '_'):
+        ganhou = True
+    elif (tabu[0][1] == tabu[1][1]) and (tabu[1][1] == tabu[2][1]) and (tabu[2][1] != '_'):
+        ganhou = True
+    elif (tabu[0][2] == tabu[1][2]) and (tabu[1][2] == tabu[2][2]) and (tabu[2][2] != '_'):
+        ganhou = True
+    elif (tabu[0][0] == tabu[1][1]) and (tabu[1][1] == tabu[2][2]) and (tabu[2][2] != '_'):
+        ganhou = True
+    elif (tabu[0][2] == tabu[1][1]) and (tabu[1][1] == tabu[2][0]) and (tabu[2][0] != '_'):
+        ganhou = True
+
+
+
