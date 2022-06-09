@@ -18,7 +18,6 @@ while go == 's':
         go = 'xau'
     elif opcao == '1':
         n = int(input('deseja adicionar quantos contatos?\n'))
-        i = 0
         for i in range(n):
             contato = input('Informe o nome do contato\n')
             contatos.append(contato)
@@ -27,6 +26,16 @@ while go == 's':
             num = input('Informe o numero do contato\n')
             contatos.append(num)
             agenda.append(contatos)
-        print(contatos)
+    elif opcao == '2':
+        print()
+        for i in agenda:
+            print('Nome:\t', i[0] )
+            print('Email:\t',i[1])
+            print('Numero:\t',i[2])
+    
+    elif opcao == '3':
+        print()
+    
+    print(agenda)
 
 print('Voce saiu da agenda')
