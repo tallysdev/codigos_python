@@ -16,9 +16,9 @@ while go == 's':
     if opcao == '0':
         go = 'xau'
     elif opcao == '1':
-        n = input('deseja adicionar quantos contatos?\n'))
+        n = input('deseja adicionar quantos contatos?\n')
         for i in range(n):
-            contato = input('Informe o contato\n')
+            contato = input('Informe o contato\n', (i+1))
             contatos.append(contato)
         print(contatos)
 
