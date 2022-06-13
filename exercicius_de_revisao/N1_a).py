@@ -2,7 +2,7 @@ import random
 part = 0
 vjog = 0
 vcomp = 0
-while part < 4:
+while part < 5:
     jog = random.randint(1,6)
     comp = random.randint(1,6)
     print('Jogador: ', jog)
