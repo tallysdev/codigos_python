@@ -1,3 +1,5 @@
+# a. Disputar 5 partidas e identificar quantas partidas cada jogador venceu
+
 import random
 part = 0
 vjog = 0
