@@ -1,3 +1,5 @@
+# b)Disputar várias partidas até que um dos jogadores obtenha 5 vitórias
+
 import random
 vjog = 0 
 vcomp = 0
