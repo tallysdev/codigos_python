@@ -51,9 +51,19 @@ while go == 's':
         for nome in agenda:
             if busca_nome.upper() in nome[0].upper():
                 achou = True
+                
                 print('Nome:\t', i[0] )
+                nome_new = input('Informe seu novo nome:\t')
+                agenda [i][0] = nome_new
+
                 print('Email:\t',i[1])
+                email_new = input('Informe seu novo Email:\t')
+                agenda [i][1] = email_new
+                
                 print('Numero:\t',i[2])
+                tell_new = input('Informe seu novo nome:\t')
+                agenda [i][2] = tell_new
+                
                 print()
 
             if not achou:
