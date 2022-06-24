@@ -2,7 +2,9 @@
 
 go = input('Quer ver sua agenda de contatos?\t(s/n)\n')
 agenda = []
-contatos = []
+numero = []
+email = []
+nome = []
 while go == 's':
     print('##########################')
     print('### Agenda de contatos ###')
