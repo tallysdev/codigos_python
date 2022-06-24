@@ -18,14 +18,17 @@ while go == 's':
         go = 'xau'
     
     elif opcao == '1':
-        contato = []
-        cont = input('Informe o nome do contato \n')
-        contatos.append(cont)
-        email = input('Informe o email do contato  \n')
-        contatos.append(email)
-        num = input('Informe o numero do contato \n')
-        contatos.append(num)       
-        agenda.append(contatos)
+        n = int(input('Deseja adcionar quantos contatos?\n'))
+        for i in range(n):
+            contatos = []
+            cont = input('Informe o nome do contato {} \n'.format(i+1))
+            contatos.append(cont)
+            email = input('Informe o email do contato {} \n'.format(i+1))
+            contatos.append(email)
+            num = input('Informe o numero do contato {} \n'.format(i+1))
+            contatos.append(num)       
+            agenda.append(contatos)
+        print(agenda)
 
     elif opcao == '2':
         print()
