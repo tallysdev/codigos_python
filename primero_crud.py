@@ -31,8 +31,8 @@ while go == 's':
 
     elif opcao == '2':
         print()
-        for i in agenda:
-            print('Nome:\t', i[0] )
+        for v in agenda:
+            print('Nome:\t', i[0])
             print('Email:\t',i[1])
             print('Numero:\t',i[2])
     
@@ -50,6 +50,4 @@ while go == 's':
             if not achou:
                 print('Não encontramos esse nome')
     
-    print(agenda)
-
 print('Voce saiu da agenda')
