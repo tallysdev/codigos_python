@@ -18,27 +18,26 @@ while go == 's':
         go = 'xau'
     
     elif opcao == '1':
-
-        n = int(input('deseja adicionar quantos contatos?\n'))
-        for i in range(n):
-            cont = input('Informe o nome do contato {} \n' .format(i+1))
-            contatos.append(cont)
-            email = input('Informe o email do contato {} \n' .format(i+1))
-            contatos.append(email)
-            num = input('Informe o numero do contato {} \n' .format(i+1))
-            contatos.append(num)
-            agenda.append(contatos)
+        contato = []
+        cont = input('Informe o nome do contato \n')
+        contatos.append(cont)
+        email = input('Informe o email do contato  \n')
+        contatos.append(email)
+        num = input('Informe o numero do contato \n')
+        contatos.append(num)       
+        agenda.append(contatos)
 
     elif opcao == '2':
         print()
-        busca_nome = input('Informe o nome do contato que voce quer buscar')
+        print(agenda)
+        busca_nome = input('Informe o nome do contato que voce quer buscar:\t')
         achou = False
-        for nome in agenda:
-            if busca_nome.upper() in nome[0].upper():
+        for busca in agenda:
+            if busca_nome.upper() in busca[0].upper():
                 achou = True
-                print('Nome:\t', i[0] )
-                print('Email:\t',i[1])
-                print('Numero:\t',i[2])
+                print('Nome:\t', busca[0])
+                print('Email:\t',busca[1])
+                print('Numero:\t',busca[2])
                 print()
                 
             if not achou:
