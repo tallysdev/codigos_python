@@ -28,7 +28,6 @@ while go == 's':
             num = input('Informe o numero do contato {} \n'.format(i+1))
             contatos.append(num)       
             agenda.append(contatos)
-        print(agenda)
 
     elif opcao == '2':
         print()
@@ -50,25 +49,26 @@ while go == 's':
         print()
         busca_nome = input('Informe o nome do contato que voce quer buscar')
         achou = False
-        for nome in agenda:
-            if busca_nome.upper() in nome[0].upper():
+        for att in agenda:
+            if busca_nome.upper() in att[0].upper():
                 achou = True
                 
-                print('Nome:\t', i[0] )
+                print('Nome:\t', att[0] )
                 nome_new = input('Informe seu novo nome:\t')
-                agenda [i][0] = nome_new
+                agenda [att[0].upper()][0] = nome_new
 
-                print('Email:\t',i[1])
+                print('Email:\t',att[1])
                 email_new = input('Informe seu novo Email:\t')
-                agenda [i][1] = email_new
+                agenda [att[0].upper()][1] = email_new
                 
-                print('Numero:\t',i[2])
+                print('Numero:\t',att[2])
                 tell_new = input('Informe seu novo nome:\t')
-                agenda [i][2] = tell_new
+                agenda [att[0].upper()][2] = tell_new
                 
                 print()
 
             if not achou:
                 print('Não encontramos esse nome')
-    
+
+    print(agenda)
 print('Voce saiu da agenda')
