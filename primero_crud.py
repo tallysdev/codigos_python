@@ -35,12 +35,12 @@ while go == 's':
         achou = False
         for busca in agenda:
             if busca_nome.upper() in busca[0].upper() and not achou:
-                achou = True
                 print('Nome:\t', busca[0])
                 print('Email:\t',busca[1])
                 print('Numero:\t',busca[2])
                 print()
-                
+                achou = True
+
             if not achou:
                 print('Não encontramos esse nome')
     
@@ -60,7 +60,7 @@ while go == 's':
                 num = input('Informe o novo numero do contato \n')
                 contatos.append(num)       
                 agenda.append(contatos)
-
+                achou = True
 
             if not achou:
                 print('Não encontramos esse nome')
@@ -72,8 +72,10 @@ while go == 's':
         for dele in agenda:
             if busca_nome.upper() in dele[0].upper() and not achou:
                 for att in agenda:
+                    print(agenda[0, 'apagado'])
                     del agenda[0]
-            
+                    achou = True
+                    print()
             if not achou:
                 print('Não encontramos esse nome')
 
