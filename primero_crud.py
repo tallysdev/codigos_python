@@ -34,7 +34,7 @@ while go == 's':
         busca_nome = input('Informe o nome do contato que voce quer buscar:\t')
         achou = False
         for busca in agenda:
-            if busca_nome.upper() in busca[0].upper():
+            if busca_nome.upper() in busca[0].upper() and not achou:
                 achou = True
                 print('Nome:\t', busca[0])
                 print('Email:\t',busca[1])
@@ -86,5 +86,4 @@ while go == 's':
             print()
         print()
 
-    print(agenda)
 print('Voce saiu da agenda')
