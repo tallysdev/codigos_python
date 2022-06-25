@@ -31,18 +31,17 @@ while go == 's':
 
     elif opcao == '2':
         print()
-        print(agenda)
         busca_nome = input('Informe o nome do contato que voce quer buscar:\t')
         achou = False
         for busca in agenda:
-            if busca_nome.upper() in busca[0].upper() and not achou:
+            if busca_nome.upper() in busca[0].upper():
                 achou = True
                 print('Nome:\t', busca[0])
                 print('Email:\t',busca[1])
                 print('Numero:\t',busca[2])
                 print()
                 
-            elif not achou:
+            if not achou:
                 print('Não encontramos esse nome')
     
     elif opcao == '3':
@@ -68,6 +67,24 @@ while go == 's':
     
     elif opcao == '4':
         print('heheh')
+        busca_nome = input('Informe o nome do contato que voce quer alterar.\n')
+        achou = False
+        for dele in agenda:
+            if busca_nome.upper() in dele[0].upper() and not achou:
+                for att in agenda:
+                    del agenda[0]
+            
+            if not achou:
+                print('Não encontramos esse nome')
+
+    elif opcao == '5':
+        print()
+        for i in agenda:
+            print('Nome:\t', i[0])
+            print('Número:\t', i[1])
+            print('Email:\t', i[2])
+            print()
+        print()
 
     print(agenda)
 print('Voce saiu da agenda')
