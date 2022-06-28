@@ -16,15 +16,10 @@ for hora in range(24):
     
     if tam > 1:
         aux = tam-2
-            
-    # print(c)
-    # print(temp[aux])
-    # print(aux)
-    # print(tam)
 
     while (((c - temp[aux] > 4 or c - temp[aux] < -4) and (hora < 10 or hora >18) and saia == False)):
         c = uniform(15,45)
-        print('entrou')
+        # print('entrou')
         saia == True
     temp.append(c)
     
