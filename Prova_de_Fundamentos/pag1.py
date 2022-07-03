@@ -70,12 +70,12 @@ print()
 
 print("Letra C:")
 
-AnC=1
+anC=1
 
 for i in range(1,recursao+1):
-  AnC=5+2*AnC
+  anC=5+2*anC
 
-print("Por Loop: ",AnC)
+print("Por Loop: ",anC)
 
 def solucaoLetraC(y):
   return 12*(2**(y-1))-5 
@@ -98,12 +98,12 @@ print()
 
 print("Letra D:")
 
-AnD=1
+anD=1
 
 for i in range(1,recursao+1):
-  AnD=(2**(i-1))+2*AnD
+  anD=(2**(i-1))+2*anD
 
-print("Por Loop: ",AnD)
+print("Por Loop: ",anD)
 
 def solucaoLetraD(z):
   return  (2**(z-1))*(3+(z-1))

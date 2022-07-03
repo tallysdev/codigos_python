@@ -8,9 +8,10 @@ aux = 0
 saia = False
 for hora in range(24):
     c = uniform(15,45)
-    while c > 25 and hora < 9 or c > 30 and hora > 20:
+    while c > 25 and hora < 9 or c > 30 and hora > 20 and saia == False:
         c = uniform(15,45)
-    
+        print('aaa')
+        saia == True
     temp.append(c)
     tam = len(temp)
     
@@ -21,6 +22,15 @@ for hora in range(24):
         c = uniform(15,45)
         # print('entrou')
         saia == True
+    
+    
+    saia == False 
+
+    while (((c - temp[aux] > 2 or c - temp[aux] < -4) and (hora > 10 or hora <18) and saia == False)):
+        c = uniform(20,45)
+        # print('entrou')
+        saia == True
+
     temp.append(c)
     
     print('as temperaturas em %d h foram: %.2f, ' %(hora,c))

@@ -38,3 +38,4 @@ for i in range(8):
         h.append(i)
 
 print('as temperaturas maiores foram', sorted(maiores),'nos horarios', sorted(h))
+    
