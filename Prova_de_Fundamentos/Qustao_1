@@ -1,7 +1,7 @@
 # Questão 1
 
-valor=int(input("Digite um valor: "))
-
+recursao=int(input("informe o valor de n: "))
+ 
 #letra A
 #A(n+1) - An = 2n + 3 , n>=0 A0=1
 #A(n+1) = 2n + 3 + An
@@ -14,7 +14,7 @@ print("Letra A:")
 An=1
 loop=1
 
-while loop<=valor:
+while loop<=recursao:
   An=2*(loop-1)+3+An
   loop+=1
 
@@ -23,7 +23,7 @@ print("Por Loop: ",An)
 def resursaoQuestaoUm(n):
   return 1+(n)*(n+2)
 
-print("Por solução:", resursaoQuestaoUm(valor))
+print("Por solução:", resursaoQuestaoUm(recursao))
 
 def funcaoQuestaoUm(n):
   if n==0:
@@ -31,7 +31,7 @@ def funcaoQuestaoUm(n):
   else:
     return 2*(n-1) + 3 + funcaoQuestaoUm(n-1)
 
-print("Por função",funcaoQuestaoUm(valor))
+print("Por função",funcaoQuestaoUm(recursao))
 print()
 
 #letra B
@@ -43,7 +43,7 @@ print("Letra B:")
 
 AnB=3
 
-for i in range(1,valor+1):
+for i in range(1,recursao+1):
   AnB=3*((i-1)**2)-(i-1)+AnB
 
 print("Por Loop: ",AnB)
@@ -51,7 +51,7 @@ print("Por Loop: ",AnB)
 def resursaoQuestaoUmB(x):
   return 3+((x-1)**3)+((x-1)**2)
 
-print("Por solução:", resursaoQuestaoUmB(valor))
+print("Por solução:", resursaoQuestaoUmB(recursao))
 
 def funcaoQuestaoUmB(x):
   if x==0:
@@ -59,7 +59,7 @@ def funcaoQuestaoUmB(x):
   else:
     return 3*((x-1)**2) - (x-1) + funcaoQuestaoUmB(x-1)
 
-print("Por função",funcaoQuestaoUmB(valor))
+print("Por função",funcaoQuestaoUmB(recursao))
 print()
 
 
@@ -72,7 +72,7 @@ print("Letra C:")
 
 AnC=1
 
-for i in range(1,valor+1):
+for i in range(1,recursao+1):
   AnC=5+2*AnC
 
 print("Por Loop: ",AnC)
@@ -80,7 +80,7 @@ print("Por Loop: ",AnC)
 def resursaoQuestaoUmC(y):
   return 12*(2**(y-1))-5 
 
-print("Por solução:", resursaoQuestaoUmC(valor))
+print("Por solução:", resursaoQuestaoUmC(recursao))
 
 def funcaoQuestaoUmC(y):
   if y==0:
@@ -88,7 +88,7 @@ def funcaoQuestaoUmC(y):
   else:
     return 5 + 2*funcaoQuestaoUmC(y-1)
 
-print("Por função",funcaoQuestaoUmC(valor))
+print("Por função",funcaoQuestaoUmC(recursao))
 print()
 
 #letra D
@@ -100,7 +100,7 @@ print("Letra D:")
 
 AnD=1
 
-for i in range(1,valor+1):
+for i in range(1,recursao+1):
   AnD=(2**(i-1))+2*AnD
 
 print("Por Loop: ",AnD)
@@ -108,7 +108,7 @@ print("Por Loop: ",AnD)
 def resursaoQuestaoUmD(z):
   return  (2**(z-1))*(3+(z-1))
 
-print("Por solução:", resursaoQuestaoUmD(valor))
+print("Por solução:", resursaoQuestaoUmD(recursao))
 
 def funcaoQuestaoUmD(z):
   if z==0:
@@ -116,5 +116,5 @@ def funcaoQuestaoUmD(z):
   else:
     return (2**(z-1)) + 2*funcaoQuestaoUmD(z-1)
 
-print("Por função",funcaoQuestaoUmD(valor))
+print("Por função",funcaoQuestaoUmD(recursao))
 print()
