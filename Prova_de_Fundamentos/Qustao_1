@@ -1,0 +1,120 @@
+# Questão 1
+
+valor=int(input("Digite um valor: "))
+
+#letra A
+#A(n+1) - An = 2n + 3 , n>=0 A0=1
+#A(n+1) = 2n + 3 + An
+#An = 2(n-1) + 3 + A(n-1)
+
+print("Questão 1°:")
+
+print("Letra A:")
+
+An=1
+loop=1
+
+while loop<=valor:
+  An=2*(loop-1)+3+An
+  loop+=1
+
+print("Por Loop: ",An)
+
+def resursaoQuestaoUm(n):
+  return 1+(n)*(n+2)
+
+print("Por solução:", resursaoQuestaoUm(valor))
+
+def funcaoQuestaoUm(n):
+  if n==0:
+    return 1
+  else:
+    return 2*(n-1) + 3 + funcaoQuestaoUm(n-1)
+
+print("Por função",funcaoQuestaoUm(valor))
+print()
+
+#letra B
+#A(n+1) - An = 3(n^2) - n , n>=0 A0=3
+#A(n+1) = 3(n^2) - n  + An
+#An = 3((n-1)^2) - (n-1)  + A(n-1)
+
+print("Letra B:")
+
+AnB=3
+
+for i in range(1,valor+1):
+  AnB=3*((i-1)**2)-(i-1)+AnB
+
+print("Por Loop: ",AnB)
+
+def resursaoQuestaoUmB(x):
+  return 3+((x-1)**3)+((x-1)**2)
+
+print("Por solução:", resursaoQuestaoUmB(valor))
+
+def funcaoQuestaoUmB(x):
+  if x==0:
+    return 3
+  else:
+    return 3*((x-1)**2) - (x-1) + funcaoQuestaoUmB(x-1)
+
+print("Por função",funcaoQuestaoUmB(valor))
+print()
+
+
+#letra C
+#A(n+1) - 2An = 5 , n>=0 A0=1
+#A(n+1) = 5 + 2An
+#An = 5 + 2A(n-1)
+
+print("Letra C:")
+
+AnC=1
+
+for i in range(1,valor+1):
+  AnC=5+2*AnC
+
+print("Por Loop: ",AnC)
+
+def resursaoQuestaoUmC(y):
+  return 12*(2**(y-1))-5 
+
+print("Por solução:", resursaoQuestaoUmC(valor))
+
+def funcaoQuestaoUmC(y):
+  if y==0:
+    return 1
+  else:
+    return 5 + 2*funcaoQuestaoUmC(y-1)
+
+print("Por função",funcaoQuestaoUmC(valor))
+print()
+
+#letra D
+#A(n+1) - 2An = 2^n , n>=0 A0=1
+#A(n+1) = 2^n + 2An
+#An = 2^(n-1) + 2A(n-1)
+
+print("Letra D:")
+
+AnD=1
+
+for i in range(1,valor+1):
+  AnD=(2**(i-1))+2*AnD
+
+print("Por Loop: ",AnD)
+
+def resursaoQuestaoUmD(z):
+  return  (2**(z-1))*(3+(z-1))
+
+print("Por solução:", resursaoQuestaoUmD(valor))
+
+def funcaoQuestaoUmD(z):
+  if z==0:
+    return 1
+  else:
+    return (2**(z-1)) + 2*funcaoQuestaoUmD(z-1)
+
+print("Por função",funcaoQuestaoUmD(valor))
+print()
