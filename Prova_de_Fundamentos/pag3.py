@@ -27,10 +27,10 @@ else:
 
 print('Por Loop:',an)
 
-def solucao(n):
+def solucaoq15(n):
   return (-1)*(4**n)+2*(2**n)
 
-print('Por Soluçaõ:', solucao(recursao15))
+print('Por Soluçaõ:', solucaoq15(recursao15))
 
 #############################################################
 
@@ -65,10 +65,10 @@ else:
 
 print('Por loop:',resultado)
 
-def solucao(n):
+def solucaoq16(n):
   return 3*(4**n)+(-2)**n
 
-print('Por Solução:', solucao(recursao16))
+print('Por Solução:', solucaoq16(recursao16))
 
 #######################################################################
 
@@ -102,9 +102,40 @@ else:
 
 print('Por Loop:',resultado)
 
-def solucao(n):
+def solucaoq17(n):
   return 2*(5**n)+3*(2**n)
 
-print('Por Solução:',solucao(recursao17))
+print('Por Solução:',solucaoq17(recursao17))
 
 #####################################################################
+
+#questão 17
+#2*An=7A(n-1)-3A(n-2) a0=a1=1
+#An=(7A(n-1)-3A(n-2))/2
+
+print('\nQuestão 18:\n')
+
+
+recursao18 = recursao15
+
+def recursaoQ18(recursao18):
+  if recursao18==0 or recursao18==1:
+    return 1
+  else:
+    return (7*recursaoQ18(recursao18-1)-3*recursaoQ18(recursao18-2))/2
+
+print('Usando a Recursão',recursaoQ18(recursao18))
+
+a0=1
+a1=1
+resultado=1
+for i in range(2,recursao18+1):
+  resultado=(7*a1-3*a0)/2
+  a0=a1
+  a1=resultado
+print('Por loop:',resultado)
+
+def solucaoq18(n):
+  return 2**(-n)*(0.2*(6**n)+0.8)
+
+print('Por Solução',solucaoq18(recursao18))
