@@ -15,7 +15,7 @@ an=1
 loop=1
 
 for j in range(1,recursao+1):
-    loop = 2*(an) + 3 + (loop)
+    loop = 2*(j-1) + 3 + (loop)
 
 
 print("Por Loop: ",loop)
@@ -31,7 +31,7 @@ def recursaoLetraA(n):
   else:
     return 2*(n-1) + 3 + recursaoLetraA(n-1)
 
-print("Usano a Recursão",recursaoLetraA(recursao))
+print("Usano a Recursão:",recursaoLetraA(recursao))
 print()
 
 #letra B
@@ -59,7 +59,7 @@ def recursaoLetraB(x):
   else:
     return 3*((x-1)**2) - (x-1) + recursaoLetraB(x-1)
 
-print("Usano a Recursão",recursaoLetraB(recursao))
+print("Usano a Recursão:",recursaoLetraB(recursao))
 print()
 
 
@@ -88,7 +88,7 @@ def recursaoLetraC(y):
   else:
     return 5 + 2*recursaoLetraC(y-1)
 
-print("Usano a Recursão",recursaoLetraC(recursao))
+print("Usano a Recursão:",recursaoLetraC(recursao))
 print()
 
 #letra D
@@ -116,5 +116,5 @@ def recursaoLetraD(z):
   else:
     return (2**(z-1)) + 2*recursaoLetraD(z-1)
 
-print("Usando a Recursão",recursaoLetraD(recursao))
+print("Usando a Recursão:",recursaoLetraD(recursao))
 print()
