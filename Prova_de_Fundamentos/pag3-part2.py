@@ -2,7 +2,9 @@ from math import sqrt
 #questão 22
 #Ln=L(n-1)+L(n-2) L1=1 L2=3 n>=3
 
-recursao22=int(input("Digite um Valor:"))
+recursao22=int(input("Questão 22 Digite um Valor:"))
+
+print('\nQuestão 22\n')
 
 def recursaoQ22(recursao22):
   if recursao22==1:
@@ -16,16 +18,16 @@ print('Usando a Recursão:',recursaoQ22(recursao22))
 
 a1_22=1
 a0_22=3
-resultado_23_22=1
+resultado_22=1
 if recursao22==2:
-  resultado_23_22=a0_22
+  resultado_22=a0_22
 else:
   for i in range(3,recursao22+1):
-      resultado_23=a1_22+a0_22
+      resultado_22=a1_22+a0_22
       a1_22=a0_22
-      a0_22=resultado_23_22
+      a0_22=resultado_22
 
-print('Por loop:',resultado_23_22)
+print('Por loop:',resultado_22)
 
 def recursao(n):
   return (((1+sqrt(5))/2)**n)+(((1-sqrt(5))/2)**n)
@@ -38,7 +40,9 @@ print('Por Solução:',"%.2f"%recursao(recursao22))
 #9An=6A(n-1)-A(n-2) a0=6 a1=5
 #An=(6A(n-1)-A(n-2))/9
 
-reursao23=int(input("Digite um reursao23:"))
+reursao23=int(input("\nQuestão 23 Digite um Valor:"))
+
+print('\nQuestão 23\n')
 
 def recursaoq23(reursao23):
   if reursao23==0:
