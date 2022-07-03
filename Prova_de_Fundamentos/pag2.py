@@ -13,10 +13,7 @@ for i in range(1,mes+1):
 
 print("Por Loop: %.2f "%an)
 
-def solucao(n):
-  return (0.3144654088)*((13780)*(1.06**n)-10600)
 
-print("Por solução: %.2f" %solucao(mes))
 
 def recursao(z):
   if z==0:
