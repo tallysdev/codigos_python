@@ -1,7 +1,7 @@
 #questão 15
 #An=6A(n-1)-8A(n-2) a0=1 a1=0
 
-recursao15=int(input("informe o recursao17 de n para todas a questões:"))
+recursao15=int(input("informe o Valor de n para todas a questões:"))
 
 def recursaoQ15(recursao15):
   if recursao15==0:
