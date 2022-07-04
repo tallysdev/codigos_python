@@ -21,6 +21,8 @@ a0_22=3
 resultado_22=1
 if recursao22==2:
   resultado_22=a0_22
+elif recursao22==1:
+  resultado_22=a1_22
 else:
   for i in range(3,recursao22+1):
       resultado_22=a1_22+a0_22
@@ -29,10 +31,7 @@ else:
 
 print('Por loop:',resultado_22)
 
-def recursao(n):
-  return (((1+sqrt(5))/2)**n)+(((1-sqrt(5))/2)**n)
 
-print('Por Solução:',"%.2f"%recursao(recursao22))
 
 ####################################################################
 
@@ -52,7 +51,7 @@ def recursaoq23(reursao23):
   else:
     return (6*recursaoq23(reursao23-1)-recursaoq23(reursao23-2))/9
 
-print('Usando a Recursão:',recursaoq23(reursao23))
+print('Usando a Recursão:',"%.2f"%recursaoq23(reursao23))
 
 a0_23=6
 a1_23=5
@@ -65,9 +64,15 @@ else:
     a0_23=a1_23
     a1_23=resultado_23
 
-print('Por Loop:',resultado_23)
+print('Por Loop:',"%.2f"%resultado_23)
 
-def recursao(n):
-  return 3**(-n)*(9*n+6)
 
-print('Por Solução:',recursaoq23(reursao23))
+def recursaot(n):
+  return 6*((1/3)**n)+(9*(n*((1/3)**n)))
+
+print('Por Soluçãot:',"%.2f"%recursaot(reursao23))
+
+def recursaott(n):
+  return 18 * (1/3)**n + (3)*n*(1/3)**n
+
+print('Por Soluçãott:',"%.2f"%recursaott(reursao23))

@@ -22,8 +22,10 @@ print("Por Loop: ",loop)
 
 def solucaoLetraA(n):
   return 1+(n)*(n+2)
+  
 
 print("Por Solução:", solucaoLetraA(recursao))
+
 
 def recursaoLetraA(n):
   if n==0:
@@ -38,6 +40,7 @@ print()
 #A(n+1) - An = 3(n^2) - n , n>=0 A0=3
 #A(n+1) = 3(n^2) - n  + An
 #An = 3((n-1)^2) - (n-1)  + A(n-1)
+
 
 print("Letra B:")
 
