@@ -1,7 +1,7 @@
-Gol
-Uno
-Palio
-EcoSport
 Clio
-Strada
+EcoSport
+Gol
 Golf
+Palio
+Strada
+Uno
