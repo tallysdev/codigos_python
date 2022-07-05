@@ -13,13 +13,14 @@ for linha in arq:
     lista2.append(linha)
 arq.close()
 
-arq = open('carros.txt','a')
-
-arq.sort()
-
-arq.close()
 
 lista2.sort()
-print('Lista de carros do arquivo:')
+
 for carro in lista2:
  print(carro)
+
+arq = open('carros.txt','w')
+
+for carroa in lista2:
+    arq.write(carroa + '\n')
+arq.close()
